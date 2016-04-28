@@ -19,7 +19,7 @@ cd __SOURCE_DIRECTORY__
 
 let product = "Akka.NET"
 let authors = [ "Akka.NET Team" ]
-let copyright = "Copyright © 2013-2016 Akka.NET Team"
+let copyright = "Copyright Â© 2013-2016 Akka.NET Team"
 let company = "Akka.NET Team"
 let description = "Akka.NET is a port of the popular Java/Scala framework Akka to .NET"
 let tags = ["akka";"actors";"actor";"model";"Akka";"concurrency"]
@@ -169,7 +169,7 @@ let updateNugetPackages _ =
                     Prerelease = isPreRelease
                     ToolPath = nugetExe
                     RepositoryPath = "src/Packages"
-                    Ids = ["Akka"]
+                    Ids = ["Akka.DI.Core"; "Akka.DI.TestKit"]
                     }) config
 
 Target "UpdateDependencies" <| fun _ ->
