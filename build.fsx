@@ -7,7 +7,6 @@ open System.IO
 open System.Text
 open Fake
 open Fake.FileUtils
-open Fake.MSTest
 open Fake.TaskRunnerHelper
 open Fake.ProcessHelper
 
@@ -55,7 +54,6 @@ let perfOutput = FullName "PerfResults"
 
 let nugetDir = binDir @@ "nuget"
 let workingDir = binDir @@ "build"
-let libDir = workingDir @@ @"lib\net45\"
 let nugetExe = FullName @"src\.nuget\NuGet.exe"
 let docDir = "bin" @@ "doc"
 
@@ -111,7 +109,7 @@ Target "CopyOutput" <| fun _ ->
     |> List.iter copyOutput
 
 Target "BuildRelease" DoNothing
-
+ 
 
 
 //--------------------------------------------------------------------------------
@@ -141,10 +139,42 @@ Target "RunTests" <| fun _ ->
             (Seq.singleton assembly)
 
     xunitTestAssemblies |> Seq.iter (runSingleAssembly)
- 
+
 //--------------------------------------------------------------------------------
 // Nuget targets 
 //--------------------------------------------------------------------------------
+
+open NuGet.Update
+//--------------------------------------------------------------------------------
+// Upgrade nuget package versions for dev and production
+
+let updateNugetPackages _ =
+  printfn "Updating NuGet dependencies"
+
+  let getConfigFile preRelease =
+    match preRelease with
+    | true -> "src/.nuget/NuGet.Dev.Config" 
+    | false -> "src/.nuget/NuGet.Config" 
+
+  for projectFile in !! "src/**/*.csproj" do
+    printfn "Updating packages for %s" projectFile
+    let project = Path.GetFileNameWithoutExtension projectFile
+    let projectDir = Path.GetDirectoryName projectFile
+    let config = projectDir @@ "packages.config"
+
+    NugetUpdate
+        (fun p ->
+                { p with
+                    ConfigFile = Some (getConfigFile isPreRelease)
+                    Prerelease = isPreRelease
+                    ToolPath = nugetExe
+                    RepositoryPath = "src/Packages"
+                    Ids = ["Akka"]
+                    }) config
+
+Target "UpdateDependencies" <| fun _ ->
+    printfn "Invoking updateNugetPackages"
+    updateNugetPackages()
 
 //--------------------------------------------------------------------------------
 // Clean nuget directory
@@ -221,7 +251,7 @@ let createNugetPackages _ =
         //Remove workingDir/src/obj and workingDir/src/bin
         removeDir (nugetSrcDir @@ "obj")
         removeDir (nugetSrcDir @@ "bin")
-        
+
         // Create both normal nuget package and symbols nuget package. 
         // Uses the files we copied to workingDir and outputs to nugetdir
         pack nugetDir NugetSymbolPackage.Nuspec
@@ -349,8 +379,7 @@ Target "HelpNuget" <| fun _ ->
 //--------------------------------------------------------------------------------
 
 // build dependencies
-"Clean" ==> "AssemblyInfo" ==> "RestorePackages" ==> "Build" ==> "CopyOutput" ==> "BuildRelease"
-
+"Clean" ==> "AssemblyInfo" ==> "RestorePackages" ==> "UpdateDependencies" ==> "Build" ==> "CopyOutput" ==> "BuildRelease"
 // tests dependencies
 "CleanTests" ==> "RunTests"
 
