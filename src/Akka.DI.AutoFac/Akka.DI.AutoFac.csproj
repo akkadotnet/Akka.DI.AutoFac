@@ -69,7 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Akka.DI.AutoFac.nuspec" />
-    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

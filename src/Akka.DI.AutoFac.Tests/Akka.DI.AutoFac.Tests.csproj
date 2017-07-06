@@ -35,24 +35,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Akka, Version=1.2.0.33, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akka.1.2.0\lib\net45\Akka.dll</HintPath>
+    <Reference Include="Akka, Version=1.2.2.39, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Packages\Akka.1.2.2\lib\net45\Akka.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Akka.DI.Core, Version=1.2.0.33, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akka.DI.Core.1.2.0\lib\net45\Akka.DI.Core.dll</HintPath>
+    <Reference Include="Akka.DI.Core, Version=1.2.2.39, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Packages\Akka.DI.Core.1.2.2\lib\net45\Akka.DI.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Akka.DI.TestKit, Version=1.2.0.33, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akka.DI.TestKit.1.2.0\lib\net45\Akka.DI.TestKit.dll</HintPath>
+    <Reference Include="Akka.DI.TestKit, Version=1.2.2.39, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Packages\Akka.DI.TestKit.1.2.2\lib\net45\Akka.DI.TestKit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Akka.TestKit, Version=1.2.0.33, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akka.TestKit.1.2.0\lib\net45\Akka.TestKit.dll</HintPath>
+    <Reference Include="Akka.TestKit, Version=1.2.2.40, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Packages\Akka.TestKit.1.2.2\lib\net45\Akka.TestKit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Akka.TestKit.Xunit2, Version=1.2.0.33, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Akka.TestKit.Xunit2.1.2.0\lib\net45\Akka.TestKit.Xunit2.dll</HintPath>
+    <Reference Include="Akka.TestKit.Xunit2, Version=1.2.2.40, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Packages\Akka.TestKit.Xunit2.1.2.2\lib\net45\Akka.TestKit.Xunit2.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Autofac, Version=4.6.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -69,25 +69,29 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\Packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+      <HintPath>..\Packages\xunit.abstractions.2.0.1\lib\net35\xunit.abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+    <Reference Include="xunit.assert, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+      <HintPath>..\Packages\xunit.assert.2.2.0\lib\netstandard1.1\xunit.assert.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+    <Reference Include="xunit.core, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+      <HintPath>..\Packages\xunit.extensibility.core.2.2.0\lib\netstandard1.1\xunit.core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+    <Reference Include="xunit.execution.desktop, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
+      <HintPath>..\Packages\xunit.extensibility.execution.2.2.0\lib\net452\xunit.execution.desktop.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
