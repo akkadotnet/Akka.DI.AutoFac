@@ -19,7 +19,7 @@ namespace Akka.DI.AutoFac
     /// Provides services to the <see cref="ActorSystem "/> extension system
     /// used to create actors using the AutoFac IoC container.
     /// </summary>
-    public class AutoFacDependencyResolver : IDependencyResolver
+    public class AutoFacDependencyResolver : IDependencyResolver, INoSerializationVerificationNeeded
     {
         private ILifetimeScope container;
         private ConcurrentDictionary<string, Type> typeCache;
