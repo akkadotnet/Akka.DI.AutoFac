@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Akka.DI.TestKit" Version="1.3.0" />
-    <PackageReference Include="Akka.TestKit.Xunit2" Version="1.3.0" />
+    <PackageReference Include="Akka.TestKit.Xunit2" Version="1.3.0-beta" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="xunit" Version="2.3.0-beta3-*" />
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.0-beta3-*" />
