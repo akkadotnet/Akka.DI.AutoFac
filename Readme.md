@@ -1,14 +1,14 @@
-#Akka.DI.Autofac
+# Akka.DI.Autofac
 
 **Actor Producer Extension** backed by the [Autofac](https://github.com/autofac/Autofac) Dependency Injection Container for the [Akka.NET](https://github.com/akkadotnet/akka.net) framework.
 
-#What is it?
+## What is it?
 
 **Akka.DI.Autofac** is an **ActorSystem extension** for the Akka.NET framework that provides an alternative to the basic capabilities of [Props](http://getakka.net/docs/Props) when you have Actors with multiple dependencies.  
 
 If Autofac is your IoC container of choice and your actors have dependencies that make using the factory method provided by Props prohibitive  and code maintenance is an important concern then this is the extension for you.
 
-#How to you use it?
+## How to you use it?
 
 The best way to understand how to use it is by example. If you are already considering this extension then we will assume that you know how how to use the [Autofac](https://github.com/autofac/Autofac) container. This example is demonstrating a system using [ConsistentHashing](http://getakka.net/docs/working-with-actors/Routers#consistenthashing) routing along with this extension.
 
