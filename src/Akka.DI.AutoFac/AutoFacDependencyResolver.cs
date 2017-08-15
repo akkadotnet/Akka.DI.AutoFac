@@ -19,7 +19,7 @@ namespace Akka.DI.AutoFac
     /// Provides services to the <see cref="ActorSystem "/> extension system
     /// used to create actors using the AutoFac IoC container.
     /// </summary>
-    public class AutoFacDependencyResolver : IDependencyResolver
+    public class AutoFacDependencyResolver : IDependencyResolver, INoSerializationVerificationNeeded
     {
         private ILifetimeScope container;
         private ConcurrentDictionary<string, Type> typeCache;
@@ -39,7 +39,7 @@ namespace Akka.DI.AutoFac
             if (system == null) throw new ArgumentNullException("system");
             if (container == null) throw new ArgumentNullException("container");
             this.container = container;
-            typeCache = new ConcurrentDictionary<string, Type>(StringComparer.InvariantCultureIgnoreCase);
+            typeCache = new ConcurrentDictionary<string, Type>(StringComparer.OrdinalIgnoreCase);
             this.system = system;
             this.system.AddDependencyResolver(this);
             this.references = new ConditionalWeakTable<ActorBase, ILifetimeScope>();
@@ -59,7 +59,7 @@ namespace Akka.DI.AutoFac
                        ComponentRegistry.
                        Registrations.
                        Where(registration => registration.Activator.LimitType.
-                                 Name.Equals(actorName, StringComparison.InvariantCultureIgnoreCase)).
+                                 Name.Equals(actorName, StringComparison.OrdinalIgnoreCase)).
                         Select(registration => registration.Activator.LimitType).
                         FirstOrDefault());
 
