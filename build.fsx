@@ -14,7 +14,7 @@ let configuration = "Release"
 
 // Directories
 let output = __SOURCE_DIRECTORY__  @@ "bin"
-let outputTests = output @@ "tests"
+let outputTests = output @@ "TestResults"
 let outputBinaries = output @@ "binaries"
 let outputNuGet = output @@ "nuget"
 
@@ -56,6 +56,7 @@ Target "Build" (fun _ ->
 //--------------------------------------------------------------------------------
 
 Target "RunTests" (fun _ ->
+    ensureDirectory outputTests
     let projects = !! "./**/*.Tests.csproj"
 
     let runSingleProject project =
@@ -131,6 +132,7 @@ Target "Nuget" DoNothing
 
 // all
 "BuildRelease" ==> "All"
+"RunTests" ==> "All"
 "Nuget" ==> "All"
 
 RunTargetOrDefault "All"
