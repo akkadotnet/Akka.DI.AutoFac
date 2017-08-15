@@ -1,3 +1,6 @@
+#### 1.3.0 August 15 2017 ####
+.NET Standard 1.6 support and integration with Akka.NET v1.3.0
+
 #### 1.2.3 July 12 2017 ####
 
 Support for Akka 1.2.3

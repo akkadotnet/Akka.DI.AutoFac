@@ -131,5 +131,6 @@ Target "Nuget" DoNothing
 
 // all
 "BuildRelease" ==> "All"
+"Nuget" ==> "All"
 
 RunTargetOrDefault "All"
