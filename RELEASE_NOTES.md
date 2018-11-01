@@ -13,8 +13,6 @@ We also no longer need to create the instance of `AutoFacDependencyResolver` our
 ```
 system.UseAutofac(container, out var propsResolver);
 ```
-
-
 #### 1.3.0 August 15 2017 ####
 .NET Standard 1.6 support and integration with Akka.NET v1.3.0
 
