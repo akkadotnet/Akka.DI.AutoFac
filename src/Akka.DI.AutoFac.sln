@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{248C7292-293B-41E1-9E3D-FD09D1D20D30}"
 	ProjectSection(SolutionItems) = preProject
 		..\build.fsx = ..\build.fsx
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.DI.AutoFac", "Akka.DI.AutoFac\Akka.DI.AutoFac.csproj", "{88854526-09D3-4F15-98F8-060838D958D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Akka.DI.AutoFac", "Akka.DI.AutoFac\Akka.DI.AutoFac.csproj", "{88854526-09D3-4F15-98F8-060838D958D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.DI.AutoFac.Tests", "Akka.DI.AutoFac.Tests\Akka.DI.AutoFac.Tests.csproj", "{81AADD01-5545-4409-B20C-AA85956E588B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Akka.DI.AutoFac.Tests", "Akka.DI.AutoFac.Tests\Akka.DI.AutoFac.Tests.csproj", "{81AADD01-5545-4409-B20C-AA85956E588B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {446A85DC-A1AF-478E-ADDB-FF491E7B4373}
 	EndGlobalSection
 EndGlobal
