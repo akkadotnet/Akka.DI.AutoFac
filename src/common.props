@@ -3,7 +3,7 @@
     <Copyright>Copyright © 2013-2020 Akka.NET Team</Copyright>
     <Authors>Akka.NET Team</Authors>
     <VersionPrefix>1.4.2</VersionPrefix>
-    <PackageReleaseNotes>Akka.NET v1.4.1-RC2 support.</PackageReleaseNotes>
+    <PackageReleaseNotes>Akka.NET v1.4.1-RC3 support.</PackageReleaseNotes>
     <PackageIconUrl>http://getakka.net/images/akkalogo.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/akkadotnet/Akka.DI.AutoFac</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/akkadotnet/Akka.DI.AutoFac/blob/master/LICENSE</PackageLicenseUrl>
