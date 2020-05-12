@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Akka.DI.Core" Version="$(AkkaVersion)" />
-    <PackageReference Include="Autofac" Version="5.1.2" />
+    <PackageReference Include="Autofac" Version="5.2.0" />
   </ItemGroup>
 
   <ItemGroup>
