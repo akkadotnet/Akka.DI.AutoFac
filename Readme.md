@@ -1,4 +1,6 @@
-# Akka.DI.Autofac
+# Akka.DI.Autofac [Deprecated]
+
+## Please note that Akka.DI.Autofac and all other Akka.DI plugins are deprecated going forward. Please use [Akka.DependencyInjection instead](https://getakka.net/articles/actors/dependency-injection.html) going forward.
 
 **Actor Producer Extension** backed by the [Autofac](https://github.com/autofac/Autofac) Dependency Injection Container for the [Akka.NET](https://github.com/akkadotnet/akka.net) framework.
 
